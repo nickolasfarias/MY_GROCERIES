@@ -1,14 +1,41 @@
+<div class="banner d-flex justify-content-center align-items-center mt-3">
+   <%= image_tag "market-logo.png", class: "banner-img" %>
+    <h1 class="mb-0">My groceries</h1>
+</div>
+
+<div class="container mt-3" style="position: relative; left:30px;">
+  <%= form_tag products_path, class: "inline-form", method: :get do %>
+  <div class="search-bar">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a product"
+      %>
+  </div>
+  <div>
+    <%= submit_tag "Search", class: "btn btn-light form-button"%>
+  </div>
+    <% end %>
+</div>
+
 <div class="container mt-5">
   <div class="card-product">
-    <img src=<%= "#{@product.image_url}" %> class="m-3"/>
+    <img src=<%= "#{@product.image_url}" %> class="img-product m-3"/>
     <div class="card-product-infos">
-      <h2 class="product-name m-2"><%= @product.name %></h2>
-      <div class="product-info m-2">
-        <p><strong>Category:</strong> <%= @product.category %></p>
-        <p><strong>Market name:</strong> <%= @product.market %></p>
-        <p><strong>Market address:</strong> <%= @product.address %></p>
+      <div>
+        <h2 class="product-name m-2"><%= @product.name %></h2>
       </div>
-      <h2 class="best-offer m-2">Best offer: R$<%= @product.price %></h2>
+      <div class="d-flex">
+        <div class="product-info m-2">
+          <p><strong>Category:</strong> <%= @product.category %></p>
+          <p><strong>Market name:</strong> <%= @product.market %></p>
+          <p><strong>Market address:</strong> <%= @product.address %></p>
+        </div>
+        <div class="best-offer d-flex flex-column justify-content-center align-items-center m-2">
+          <h2 class="text-center">Best offer: R$<%= @product.price %></h2>
+            <button class="add-to-cart"><strong>Add to cart</strong></button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

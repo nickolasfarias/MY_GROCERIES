@@ -21,11 +21,11 @@
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 20px;
   line-height: 1.4;
-  opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  color: white;
 }
 
 .card-product .card-product-infos {
@@ -43,7 +43,7 @@
   background-color: #4C3575;
   color:white;
   border-radius: 5px;
-  padding: 30px;
+  padding: 15px;
 }
 
 .product-info {
@@ -51,4 +51,18 @@
   color:white;
   border-radius: 5px;
   padding: 30px
+}
+
+.add-to-cart {
+  background-color: white;
+  color: #4C3575;
+  padding: 5px;
+  border-radius:12px;
+  margin-top: 10px;
+  border: none;
+}
+
+.add-to-cart:hover {
+  background-color: #7858A6;
+  color: white;
 }
