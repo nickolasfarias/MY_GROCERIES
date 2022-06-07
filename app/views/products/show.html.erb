@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="card-product">
+    <img src=<%= "#{@product.image_url}" %> class="m-3"/>
+    <div class="card-product-infos">
+      <h2 class="product-name m-2"><%= @product.name %></h2>
+      <div class="product-info m-2">
+        <p><strong>Category:</strong> <%= @product.category %></p>
+        <p><strong>Market name:</strong> <%= @product.market %></p>
+        <p><strong>Market address:</strong> <%= @product.address %></p>
+      </div>
+      <h2 class="best-offer m-2">Best offer: R$<%= @product.price %></h2>
+    </div>
+  </div>
+</div>
