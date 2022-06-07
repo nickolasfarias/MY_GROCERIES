@@ -1,0 +1,19 @@
+<div class="banner d-flex justify-content-center align-items-center mt-3">
+   <%= image_tag "market-logo.png", class: "banner-img" %>
+    <h1 class="mb-0">My groceries</h1>
+</div>
+
+<div class="container mt-3" style="position: relative; left:-15px;">
+  <%= form_tag products_path, class: "inline-form", method: :get do %>
+  <div class="search-bar">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a product"
+      %>
+  </div>
+  <div>
+    <%= submit_tag "Search", class: "btn btn-light form-button"%>
+  </div>
+    <% end %>
+</div>
