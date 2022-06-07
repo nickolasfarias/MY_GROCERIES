@@ -4,10 +4,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    if params[:query].present?
-      @products = Product.where("model ILIKE ?", "%#{params[:query]}%")
-    else
-      @products = Product.where.not(user: current_user)
-    end
+    @products = Product.all
+    @products = Product.search_by_name(params[:query]) if params[:query].present?
   end
 end
