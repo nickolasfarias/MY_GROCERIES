@@ -2,6 +2,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 540px;
 }
 
 .card-trip > img {
@@ -36,8 +37,8 @@
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
-  width: 40px;
+  top: 0px;
+  width: 50px;
 }
 
 .cards {
@@ -49,4 +50,28 @@
 .card-img {
   width: 100%;
   padding: 10px;
+  height: 250px;
+}
+
+
+.div-info {
+  height: 150px;
+}
+
+.description {
+  height: 80px;
+}
+
+.background-purple {
+  padding: 15px;
+  background-color: #4C3575;
+  border-radius:15px;
+  text-align: center;
+}
+
+.background-purple-bottom {
+  padding: 7px;
+  background-color: #4C3575;
+  border-radius:15px;
+  text-align: center;
 }

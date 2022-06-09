@@ -27,12 +27,11 @@
       </div>
       <div class="d-flex">
         <div class="product-info m-2">
-          <p><strong>Category:</strong> <%= @product.category %></p>
           <p><strong>Market name:</strong> <%= @product.market %></p>
           <p><strong>Market address:</strong> <%= @product.address %></p>
         </div>
         <div class="best-offer d-flex flex-column justify-content-center align-items-center m-2">
-          <h2 class="text-center">Best offer: R$<%= @product.price %></h2>
+          <h2 class="text-center">Current offer: R$<%= @product.price %></h2>
             <button class="add-to-cart"><strong>Add to cart</strong></button>
         </div>
       </div>
@@ -40,8 +39,16 @@
   </div>
 
   <div class=" d-flex">
-  <div class="product-sugestions">
-
+  <div class="product-sugestions d-flex flex-column ">
+    <% @products_similar.each do |product| %>
+      <%= link_to product_path(product), class: "card-button flex-fill" do %>
+      <div class="similar m-2 d-flex">
+          <img src=<%= product.market_image_url%> alt="market image" class="market-logo m-2">
+          <h2 class="mx-2 my-auto" style="color:#7858A6"><%= product.name %></h2>
+          <h3 class="margin-price my-auto"> R$<%= product.price %></h3>
+      </div>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="map map-div"
