@@ -41,7 +41,8 @@
 <div class="container" id="special">
   <div class="row" style="text-align: center;">
     <div class="form-actions3 col-12">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "Sign up", class: "mb-3" %>
+      <%= link_to "Or Login", new_session_path(resource_name) %><br />
     </div>
   </div>
 </div>
