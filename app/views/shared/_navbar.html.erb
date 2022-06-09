@@ -15,7 +15,7 @@
             <%= link_to ('<i class="fas fa-home nav-icon mx-3"></i>').html_safe, products_path  %>
           </li>
           <li class="nav-item active">
-            <%= link_to ('<i class="fas fa-shopping-basket nav-icon mx-3"></i>').html_safe, products_path  %>
+            <%= link_to ('<i class="fas fa-shopping-basket nav-icon mx-3"></i>').html_safe, cart_path(@current_cart)  %>
           </li>
           <li class="nav-item dropdown">
             <%= button_tag "My profile", class: "nav-btn dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

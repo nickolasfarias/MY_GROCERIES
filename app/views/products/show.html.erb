@@ -32,7 +32,7 @@
         </div>
         <div class="best-offer d-flex flex-column justify-content-center align-items-center m-2">
           <h2 class="text-center">Current offer: R$<%= @product.price %></h2>
-            <button class="add-to-cart"><strong>Add to cart</strong></button>
+            <%= button_to "Add to cart", lines_path(:product_id => @product.id, :method => :post), class: "add-to-cart" %>
         </div>
       </div>
     </div>
