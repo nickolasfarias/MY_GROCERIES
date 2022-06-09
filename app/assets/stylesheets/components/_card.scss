@@ -2,7 +2,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 540px;
+  height: 430px;
 }
 
 .card-trip > img {
@@ -43,7 +43,7 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
@@ -59,19 +59,19 @@
 }
 
 .description {
-  height: 80px;
+  height: 100px;
 }
 
 .background-purple {
-  padding: 15px;
-  background-color: #4C3575;
   border-radius:15px;
   text-align: center;
+  background-color: #7858A6;
+  color: white;
 }
 
 .background-purple-bottom {
-  padding: 7px;
-  background-color: #4C3575;
+  background-color: #7858A6;
+  color: white;
   border-radius:15px;
   text-align: center;
 }

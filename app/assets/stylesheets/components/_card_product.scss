@@ -68,6 +68,7 @@
   color: white;
 }
 
+
 .product-sugestions {
   height: 100vh;
   width: 45vw;
@@ -92,12 +93,16 @@
 }
 
 .market-logo {
-  height:100px;
-  width: 100px;
+  height:50px;
+  width: 50px;
   border-radius:15px;
 }
 
 .margin-price {
   margin-left: 165px;
   margin-right: 30px;
+}
+
+.x:hover {
+  border: black 3px solid;
 }
