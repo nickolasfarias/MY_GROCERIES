@@ -22,13 +22,20 @@
   <div class="cards mt-5">
     <% @products.each do |product| %>
       <%= link_to product_path(product), class: "card-button" do %>
-        <div class="card-trip" style="border-radius: 20px;">
+        <div class="card-trip" style="border-radius: 20px">
           <div class="card-trip-infos">
             <%= image_tag product.image_url, class: "card-img" %>
-            <h3 class="card-trip-pricing">R$<%= product.price %></h3>
-            <h2 class="card-text"><%= product.name %></h2>
-            <h6><%= product.market %></h6>
-            <h6><%= product.address %></h6>
+            <div class="div-info">
+              <h3 class="card-trip-pricing background-purple">R$<%= product.price %></h3>
+              <div class="description">
+                <h6 class="card-text background-purple"><strong><%= product.name %></strong></h6>
+              </div>
+                <img src=<%= product.market_image_url %> class="card-trip-user avatar-bordered" />
+                <div class="background-purple-bottom m-3">
+                  <h6><%= product.market %></h6>
+                  <h6><%= product.address %></h6>
+                </div>
+            </div>
           </div>
         </div>
       <% end %>

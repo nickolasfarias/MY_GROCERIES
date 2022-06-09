@@ -1,10 +1,8 @@
-require "open-uri"
-require "nokogiri"
-
 class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
-    @marker =  {
+    @products_similar = Product.where(name: @product.name)
+    @marker = {
       lat: @product.latitude,
       lng: @product.longitude
     }
