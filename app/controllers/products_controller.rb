@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
   def index
     @count = Product.all
-    @products = Product.all.order(price: :desc)
+    @products = Product.all.order(name: :asc)
     @products = Product.search_by_name(params[:query]) if params[:query].present?
     @pagy, @products = pagy(@products, items: 16)
   end
