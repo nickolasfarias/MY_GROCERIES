@@ -6,6 +6,7 @@ class Product < ApplicationRecord
   validates :name, uniqueness: { scope: :market,
     message: "Should have one per market" }
   validates :price, numericality: { greater_than: 0 }
+  monetize :price_cents
 
   include PgSearch::Model
   pg_search_scope :search_by_name,
