@@ -42,11 +42,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -65,7 +65,7 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
@@ -107,11 +107,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -130,13 +130,12 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
   product.save
 end
-
 
 
 url = 'https://www.rappi.com.br/lojas/900143849-hortifruti-rio-de-janeiro'
@@ -172,11 +171,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -195,13 +194,12 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
   product.save
 end
-
 
 
 url = 'https://www.rappi.com.br/lojas/900536315-pao-de-azucar-now-rio-de-janeiro'
@@ -237,11 +235,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -260,13 +258,12 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
   product.save
 end
-
 
 
 url = 'https://www.rappi.com.br/lojas/900129228-cencosud-prezunic-rio-de-janeiro'
@@ -302,11 +299,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -325,13 +322,12 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
   product.save
 end
-
 
 
 url = 'https://www.rappi.com.br/lojas/900198874-grupo-big-hiper-rio-de-janeiro'
@@ -367,11 +363,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -390,13 +386,12 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
   product.save
 end
-
 
 
 url = 'https://www.rappi.com.br/lojas/900172746-superprix-rio-de-janeiro'
@@ -432,11 +427,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -455,13 +450,12 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
   product.save
 end
-
 
 
 
@@ -498,11 +492,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -521,12 +515,13 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
   product.save
 end
+
 
 
 url = 'https://www.rappi.com.br/lojas/900198823-sams-club-super-rio-de-janeiro'
@@ -562,11 +557,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -585,7 +580,7 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
@@ -627,11 +622,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -650,7 +645,7 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
@@ -692,11 +687,11 @@ prices.map! do |price|
 end
 
 prices.map! do |price|
-  price.gsub(",", ".")
+  price.gsub(",", "")
 end
 
 prices.map! do |price|
-  price.to_f
+  price.to_i
 end
 
 market_img = imgs_srcs[0]
@@ -715,7 +710,7 @@ imgs_srcs.each_with_index do |src, i|
 end
 
 prices.each_with_index do |price, i|
-  instances_product[i].price = price
+  instances_product[i].price_cents = price
 end
 
 instances_product.each do |product|
