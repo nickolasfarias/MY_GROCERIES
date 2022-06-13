@@ -1,0 +1,69 @@
+.orders-card {
+  background-color: white;
+  color:#7858A6;
+  padding:20px;
+  width:300px;
+  border-radius:15px;
+}
+
+.see-details {
+  background-color: #4C3575;
+  color: white;
+  padding: 5px;
+  border-radius:12px;
+  margin-top: 10px;
+  border: none;
+  font-weight: bolder;
+}
+
+.see-details:hover{
+  background-color: #7858A6;
+  color:white;
+}
+
+.close-modal {
+  background-color: #4C3575;
+  color: white;
+  padding: 5px;
+  border-radius:12px;
+  border: none;
+  font-weight: bolder;
+  width: 20%;
+}
+
+.close-modal:hover {
+  background-color: #7858A6;
+  color:white;
+}
+
+.pay {
+  background-color: #4C3575;
+  color: white;
+  padding: 5px;
+  border-radius:12px;
+  border: none;
+  font-weight: bolder;
+  width: 40%;
+  height:40%;
+}
+
+.pay:hover {
+  background-color: #7858A6;
+  color:white;
+}
+
+
+.checkout {
+  background-color: white;
+  color: #4C3575;
+  border-radius: 15px;
+  width:40%;
+}
+
+
+
+.orders-layout {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 16px;
+}

@@ -49,13 +49,24 @@
   font-size: 20px;
 }
 
+.purchase {
+  color: white;
+  font-size: 20px;
+  border: 0;
+}
+
+.purchase:hover {
+  color: #4C3575;
+  font-size: 20px;
+}
+
 .title-sub {
   color: black;
   font-size: 30px;
 }
 
 .sub-total {
-  height: 100px;
+  height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
@@ -86,5 +97,5 @@
 }
 
 .card-trip-pricing {
-  font-size: 25px;
+  font-size: 20px;
 }

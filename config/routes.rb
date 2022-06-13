@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   resources :products, only: %i[index show]
 
   resources :carts, only: %i[show destroy]
+
+  resources :orders, only: [ :create, :index] do
+    resources :payments, only: :new
+  end
 end

@@ -70,16 +70,18 @@
 
 
 .product-sugestions {
-  height: 100vh;
+  height: 80vh;
   width: 45vw;
   margin-top: 15px;
   margin-right: 10px;
   border-radius: 15px;
+  background-color: #a48ccf;
+  overflow-y: auto;
 }
 
 .map-div {
   background-color: white;
-  height: 100vh;
+  height: 80vh;
   width: 45vw;
   margin-top: 15px;
   border-radius: 15px;
@@ -90,11 +92,12 @@
   color:#7858A6;
   border-radius: 5px;
   padding: auto;
+  height:120px;
 }
 
 .market-logo {
-  height:50px;
-  width: 50px;
+  height:100px;
+  width: 100px;
   border-radius:15px;
 }
 
@@ -107,7 +110,7 @@
 .x:hover {
   border: black 3px solid;
 }
-  
+
 .img-product-cart {
   height:150px;
   width: 150px;
