@@ -23,7 +23,7 @@
   <div class="cards mt-5">
     <% @products.each do |product| %>
       <%= link_to product_path(product) do %>
-        <div class="card-trip x" style="border-radius: 20px">
+        <div class="card-trip x" style="border-radius: 6px">
           <div class="card-trip-infos">
               <%= image_tag product.image_url, class: "card-img" %>
             <div class="div-info d-flex flex-column mx-auto background-purple w-100">
@@ -37,7 +37,7 @@
                 <% end %>
                 </h6>
               </div>
-                <img src=<%= product.market_image_url %> class="card-trip-user avatar-bordered mt-1" />
+              <img src=<%= product.market_image_url %> class="card-trip-user avatar-bordered mt-1" />
             </div>
           </div>
         </div>
