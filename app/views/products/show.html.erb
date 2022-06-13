@@ -1,6 +1,6 @@
 <div class="banner d-flex justify-content-center align-items-center mt-3 mx-auto">
    <%= image_tag "market-logo.png", class: "banner-img" %>
-    <h1 class="mb-0">My groceries</h1>
+    <h1 class="mb-0"><strong>My groceries</strong></h1>
 </div>
 
 <div class="container mt-3" style="position: relative; left:30px;">
@@ -42,10 +42,18 @@
   <div class="product-sugestions d-flex flex-column ">
     <% @products_similar.each do |product| %>
       <%= link_to product_path(product), class: "card-button" do %>
-      <div class="similar m-2 d-flex x">
-          <img src=<%= product.market_image_url%> alt="market image" class="market-logo m-2">
-          <h2 class="mx-2 my-auto" style="color:#7858A6"><%= product.name %></h2>
-          <h3 class="margin-price my-auto"> <%= humanized_money_with_symbol(product.price) %></h3>
+      <div class="similar mb-3">
+        <div class="row align-items-center">
+          <div class="col-2">
+            <img src=<%= product.market_image_url%> alt="market image" class="market-logo m-2">
+          </div>
+          <div class="col-7">
+            <h2 class="text-center justify-content-center" style="color: black; font-size: 25px;"><%= product.name %></h2>
+          </div>
+          <div class="col-3">
+            <h3 class="margin-price my-auto"> <%= humanized_money_with_symbol(product.price) %></h3>
+          </div>
+        </div>
       </div>
       <% end %>
     <% end %>
