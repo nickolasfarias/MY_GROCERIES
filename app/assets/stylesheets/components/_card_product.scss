@@ -1,6 +1,6 @@
 .card-product {
   overflow: hidden;
-  height: 70vh;
+  height: 46vh;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -12,6 +12,7 @@
   height: 100%;
   width: 40%;
   object-fit: cover;
+  padding: 48px;
 }
 
 .card-product h2 {
@@ -70,18 +71,18 @@
 
 
 .product-sugestions {
-  height: 80vh;
+  height: 60vh;
   width: 45vw;
   margin-top: 15px;
   margin-right: 10px;
   border-radius: 15px;
-  background-color: #a48ccf;
   overflow-y: auto;
+  padding-top: 5px;
 }
 
 .map-div {
   background-color: white;
-  height: 80vh;
+  height: 60vh;
   width: 45vw;
   margin-top: 15px;
   border-radius: 15px;
@@ -89,10 +90,11 @@
 
 .similar {
   background-color: white;
-  color:#7858A6;
+  color: black;
   border-radius: 5px;
   padding: auto;
   height:120px;
+  width: 96%;
 }
 
 .market-logo {
@@ -102,8 +104,8 @@
 }
 
 .margin-price {
-  margin-left: 165px;
-  margin-right: 30px;
+  margin-right: 25px;
+  font-size: 23px;
 }
 
 
