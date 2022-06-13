@@ -1,0 +1,48 @@
+<div class="container">
+  <h1 class="m-5" style="color:white;"><strong>You have <%= pluralize @orders.count, 'order' %> being delivered</strong></h1>
+    <div class="orders-layout m-5">
+      <% @orders.each_with_index do |order, i| %>
+      <div class="m-5 orders-card">
+        <h2 style ="margin-left:0; color:#7858A6;"><strong> Order #<%= order.id %> </strong></h2>
+        <hr>
+        <h3>Status: <%= order.state %></h3>
+        <hr>
+        <h3>Total: <%= humanized_money_with_symbol order.amount  %></h3>
+        <hr>
+        <button type="button" class="see-details" data-bs-toggle="modal" data-bs-target="#exampleModal<%= i %>">
+          See details
+        </button>
+      </div>
+      <% end %>
+    </div>
+
+    <% @orders.each_with_index do |order, i| %>
+      <div class="modal fade" id="exampleModal<%= i %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" style="border-radius:15px; color:#4C3575">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel"><strong>Order # <%= order.id %></strong></h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h4><strong>Items:</strong></h4>
+              <ul>
+                <% order.cart.lines.each do |line|  %>
+                <li><strong><%= line.quantity %>X</strong> <%= line.product.name %> from <strong><%= line.product.market %></strong>. Cost: <strong> <%= humanized_money_with_symbol line.product.price * line.quantity  %> </strong></li>
+                <% end %>
+              </ul>
+              <hr>
+              <h5><strong>ISSUED ON</strong> <%= order.created_at.to_date %></h5>
+              <hr>
+              <h5><strong>TOTAL</strong> <%= humanized_money_with_symbol order.amount %></h5>
+              <hr>
+              <h5>Estimated delivery in <strong>2 business days</strong></h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-modal" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>

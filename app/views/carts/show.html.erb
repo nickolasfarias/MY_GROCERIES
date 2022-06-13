@@ -11,7 +11,7 @@
       <div class="card-product-cart mb-2">
         <img src=<%= "#{line.product.image_url}" %> class="img-product-cart m-3"/>
         <div class="card-product-cart-info">
-          <li>Item: <%= line.product.name %>/ Price: R<%= number_to_currency(line.product.price) %>  / Total Price: R<%= number_to_currency(line.total_price) %>
+          <li>Item: <%= line.product.name %>/ Price: <%= humanized_money_with_symbol(line.product.price) %>  / Total Price: <%= humanized_money_with_symbol(line.total_price) %>
             <div class="link-cart-text">
               <div>
                 <%= link_to "+ #{line.quantity} ", line_item_add_path(:id => line), method: :post %>
@@ -30,7 +30,13 @@
 
 <div class="container mt-5 sub-total">
   <div class="title-sub">
-    <h3>Sub total: R<%= number_to_currency(@cart.sub_total) %></h3>
+    <h3>Sub total: <%= humanized_money_with_symbol(@cart.sub_total) %></h3>
+  </div>
+  <div class="link-sub-text">
+    <%= form_tag orders_path do %>
+    <%= hidden_field_tag 'cart_id', @current_cart.id %>
+    <%= submit_tag 'Purchase', class: 'link-sub-text empty-cart mb-2 purchase' %>
+    <% end %>
   </div>
   <div class="link-sub-text empty-cart">
     <%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"} %>

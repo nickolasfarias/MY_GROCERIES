@@ -1,6 +1,7 @@
 class Cart < ApplicationRecord
   has_many :lines, dependent: :destroy
   has_many :products, through: :lines
+  has_many :orders
 
   def ordered_lines
     self.lines.order(created_at: :desc)

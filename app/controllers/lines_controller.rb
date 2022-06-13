@@ -3,7 +3,7 @@ class LinesController < ApplicationController
   def create
     # Find associated product and current cart
     chosen_product = Product.find(params[:product_id])
-    current_cart = @current_cart
+    current_cart = Cart.last
 
     # If cart already has this product then find the relevant line_item and iterate quantity otherwise create a new line_item for this product
     if current_cart.products.include?(chosen_product)
@@ -23,25 +23,28 @@ class LinesController < ApplicationController
   end
 
   def destroy
+    current_cart = Cart.last
     @line_item = Line.find(params[:id])
     @line_item.destroy
-    redirect_to cart_path(@current_cart)
+    redirect_to cart_path(current_cart)
   end
 
   def add_quantity
+    current_cart = Cart.last
     @line_item = Line.find(params[:id])
     @line_item.quantity += 1
     @line_item.save
-    redirect_to cart_path(@current_cart)
+    redirect_to cart_path(current_cart)
   end
 
   def reduce_quantity
+    current_cart = Cart.last
     @line_item = Line.find(params[:id])
     if @line_item.quantity > 1
       @line_item.quantity -= 1
     end
     @line_item.save
-    redirect_to cart_path(@current_cart)
+    redirect_to cart_path(current_cart)
   end
 
   private

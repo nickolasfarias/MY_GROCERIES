@@ -41,11 +41,11 @@
   <div class=" d-flex">
   <div class="product-sugestions d-flex flex-column ">
     <% @products_similar.each do |product| %>
-      <%= link_to product_path(product), class: "card-button flex-fill" do %>
-      <div class="similar m-2 d-flex">
+      <%= link_to product_path(product), class: "card-button" do %>
+      <div class="similar m-2 d-flex x">
           <img src=<%= product.market_image_url%> alt="market image" class="market-logo m-2">
           <h2 class="mx-2 my-auto" style="color:#7858A6"><%= product.name %></h2>
-          <h3 class="margin-price my-auto"> R$<%= product.price %></h3>
+          <h3 class="margin-price my-auto"> <%= humanized_money_with_symbol(product.price) %></h3>
       </div>
       <% end %>
     <% end %>

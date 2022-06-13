@@ -36,6 +36,8 @@ gem 'simple_form', github: 'heartcombo/simple_form'
 gem 'pg_search', '~> 2.3.0'
 gem 'pagy', '~> 5.10'
 gem 'money-rails'
+gem 'stripe'
+gem 'stripe_event'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
