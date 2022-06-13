@@ -30,10 +30,10 @@
               <h3 class="card-trip-pricing background-purple mt-2"><%= humanized_money_with_symbol(product.price) %></h3>
               <div class="description">
                 <h6 class="card-text background-purple">
-                <% if product.name.length < 32 %>
+                <% if product.name.length < 25 %>
                   <%= product.name %>
                 <% else %>
-                  <%= product.name[0..31]... %>
+                  <%= product.name[0..24]... %>
                 <% end %>
                 </h6>
               </div>
