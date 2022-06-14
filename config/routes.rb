@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'products#index'
+  root to: 'pages#home'
+  resources :pages, only: [:home]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.
   post 'lines/:id/add' => "lines#add_quantity", as: "line_item_add"
   post 'lines/:id/reduce' => "lines#reduce_quantity", as: "line_item_reduce"
