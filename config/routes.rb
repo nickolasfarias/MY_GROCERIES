@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :carts, only: %i[show destroy]
 
-  resources :orders, only: [ :create, :index] do
+  resources :orders, only: [ :create, :index, :destroy] do
     resources :payments, only: :new
   end
 end
