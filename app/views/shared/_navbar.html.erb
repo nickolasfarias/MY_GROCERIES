@@ -1,8 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "" %>
-    <% end %>
+    <div class="logo-nav d-flex align-items-center">
+      <%= image_tag "market-logo.png", class: "banner-img" %>
+      <p class="h3 mb-0"><strong>MyGroceries</strong></p>
+    </div>
+
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,7 +20,7 @@
             <%= link_to ('<i class="fas fa-shopping-basket nav-icon mx-3"></i>').html_safe, cart_path(Cart.last)  %>
           </li>
           <li class="nav-item dropdown">
-            <button class="nav-btn dropdown-toggle mx-3" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup ><strong> My profile</strong></button>
+            <button class="nav-btn dropdown-toggle ms-3" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup ><strong> My profile</strong></button>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My orders", orders_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
