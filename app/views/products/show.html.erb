@@ -2,6 +2,9 @@
 <div class="container mt-5">
   <div class="card-product">
     <img src=<%= "#{@product.image_url}" %> class="img-product m-3"/>
+    <%= link_to lines_path(:product_id => @product.id), :method => :post do %>
+      <i class="fas fa-cart-plus cart-icon"></i>
+    <% end %>
     <div class="card-product-infos">
       <div>
         <h2 class="product-name m-2"><%= @product.name %></h2>
@@ -13,9 +16,12 @@
         </div>
         <div class="best-offer d-flex flex-column justify-content-center align-items-center m-2">
           <h2 class="text-center">Current offer: R$<%= @product.price %></h2>
+<<<<<<< Updated upstream
           <%= link_to lines_path(:product_id => @product.id), :method => :post do %>
             <i class="fas fa-cart-plus"></i>
           <% end %>
+=======
+>>>>>>> Stashed changes
         </div>
       </div>
     </div>

@@ -28,16 +28,37 @@
 
     <div class="d-flex justify-content-center align-items-center mt-3">
         <div class="checkout ms-3 d-flex flex-column justify-content-center align-items-center">
+<<<<<<< Updated upstream
           <h1 class="text-center">Checkout summary</h1>
           <h2 style="color:#4C3575;">Items purchased:</h2>
+=======
+          <h2 class="text-center my-3" style="margin: 0 auto; color:black; font-size:38px;">Cart summary</h2>
+>>>>>>> Stashed changes
           <div class="container">
             <ul>
               <% @order.cart.lines.each do |line|%>
+<<<<<<< Updated upstream
                 <li><strong><%= line.quantity %>X <%= line.product.name %></strong> for <strong><%= humanized_money_with_symbol line.total_price %></strong></li>
               <% end %>
             </ol>
             <div class="d-flex justify-content-center align-items-center" style="width 100%;">
               <button id="pay" class="pay mt-3" ><strong>Pay</strong></button>
+=======
+                <div class="container d-flex align-items-center">
+                  <img src="<%=line.product.image_url%>" alt="" style="height:70px; width:70px;">
+                  <p class="mt-3 ms-5" style="color: black;"><strong><%= line.quantity %>X <%= line.product.name %></strong> for <strong>R<%= humanized_money_with_symbol line.total_price %></strong></p>
+                </div>
+                <hr>
+              <% end %>
+              <p style="font-size: 20px; color: black;"><strong>Total: R<%=humanized_money_with_symbol @order.amount %></strong></p>
+            <div class="d-flex flex-column justify-content-center align-items-center" style="width 100%;">
+              <button id="pay" class="pay mt-2 mb-3" ><strong>Pay</strong></button>
+              <%= link_to "I don't want it",
+              order_path(@order),
+              method: :delete,
+              data: { confirm: "Are you sure?" },
+              class:"pay mt-2 mb-3 text-center" %>
+>>>>>>> Stashed changes
             </div>
             <script src="https://js.stripe.com/v3/"></script>
             <script>

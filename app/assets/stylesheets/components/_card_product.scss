@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   border-radius: 15px;
+  position: relative;
 }
 
 .card-product img {
@@ -117,4 +118,11 @@
   height:150px;
   width: 150px;
   border-radius:8px;
+}
+
+.img-mkt-logo-cart {
+  position: relative;
+  width: 40px;
+  border-radius: 50%;
+  height: 40px;
 }
