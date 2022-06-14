@@ -2,7 +2,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 270px;
+  height: 380px;
 }
 
 .card-trip > img {
@@ -12,15 +12,17 @@
 }
 
 .card-trip h2 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
-  margin: 0;
+  padding: 8px;
 }
 
 .card-trip p {
-  font-size: 12px;
-  opacity: .7;
+  font-size: 17px;
+  opacity: 0.7;
   margin: 0;
+  color: #474747;
+  text-align: center;
 }
 
 
@@ -44,14 +46,16 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 19px;
+  row-gap: 24px;
 }
 
 .card-img {
   width: 100%;
   padding: 10px;
-  height: 170px;
+  height: 215px;
+  object-fit: contain;
 }
 
 
@@ -73,6 +77,22 @@
 .background-purple-bottom {
   background-color: #7858A6;
   color: white;
-  border-radius:15px;
+  border-radius:25px;
   text-align: center;
+}
+
+.container-index {
+  max-width: 1470px;
+}
+
+.index-price {
+  background-color: #4C3575;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.index-name-height {
+  height: 95px;
+  width: 100%;
 }
