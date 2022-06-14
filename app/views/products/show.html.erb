@@ -1,22 +1,3 @@
-<div class="banner d-flex justify-content-center align-items-center mt-3 mx-auto">
-   <%= image_tag "market-logo.png", class: "banner-img" %>
-    <h1 class="mb-0"><strong>My groceries</strong></h1>
-</div>
-
-<div class="container mt-3" style="position: relative; left:30px;">
-  <%= form_tag products_path, class: "inline-form", method: :get do %>
-  <div class="search-bar">
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a product"
-      %>
-  </div>
-  <div>
-    <%= submit_tag "Search", class: "btn btn-light form-button"%>
-  </div>
-    <% end %>
-</div>
 
 <div class="container mt-5">
   <div class="card-product">
@@ -27,12 +8,14 @@
       </div>
       <div class="d-flex">
         <div class="product-info m-2">
-          <p><strong>Market name:</strong> <%= @product.market %></p>
-          <p><strong>Market address:</strong> <%= @product.address %></p>
+          <p><strong><%= @product.market %></strong></p>
+          <p><strong><%= @product.address %></strong></p>
         </div>
         <div class="best-offer d-flex flex-column justify-content-center align-items-center m-2">
           <h2 class="text-center">Current offer: R$<%= @product.price %></h2>
-            <%= button_to "Add to cart", lines_path(:product_id => @product.id, :method => :post), class: "add-to-cart" %>
+          <%= link_to lines_path(:product_id => @product.id), :method => :post do %>
+            <i class="fas fa-cart-plus"></i>
+          <% end %>
         </div>
       </div>
     </div>
