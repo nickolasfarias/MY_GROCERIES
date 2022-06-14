@@ -531,7 +531,7 @@ doc = Nokogiri::HTML(html)
 imgs_srcs = []
 names = []
 prices = []
-address = "Rua Santiago Guerra, 345"
+address = "Rua Benedito Fernandes, 270"
 market = "Sam's Club"
 
 doc.search(".enkVhF").each_with_index do |img, i|

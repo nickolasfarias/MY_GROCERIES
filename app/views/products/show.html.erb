@@ -17,7 +17,7 @@
         <div class="best-offer d-flex flex-column justify-content-center align-items-center m-2">
           <h2 class="text-center">Current offer: R$<%= @product.price %></h2>
           <%= link_to lines_path(:product_id => @product.id), :method => :post do %>
-            <i class="fas fa-cart-plus"></i>
+            <i class="fas fa-cart-plus" style="font-size: 40px;margin-top: 10px;"></i>
           <% end %>
         </div>
       </div>

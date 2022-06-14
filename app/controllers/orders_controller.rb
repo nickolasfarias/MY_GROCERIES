@@ -36,4 +36,10 @@ class OrdersController < ApplicationController
   def show
     @order = current_user.orders.find(params[:id])
   end
+
+  def destroy
+    @order = Order.last
+    @order.destroy
+    redirect_to products_path
+  end
 end
