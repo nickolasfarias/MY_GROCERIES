@@ -2,6 +2,9 @@
 <div class="container mt-5">
   <div class="card-product">
     <img src=<%= "#{@product.image_url}" %> class="img-product m-3"/>
+    <%= link_to lines_path(:product_id => @product.id), :method => :post do %>
+      <i class="fas fa-cart-plus cart-icon"></i>
+    <% end %>
     <div class="card-product-infos">
       <div>
         <h2 class="product-name m-2"><%= @product.name %></h2>
