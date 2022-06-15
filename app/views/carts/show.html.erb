@@ -1,36 +1,29 @@
-<div class="banner d-flex justify-content-center align-items-center mt-3 mx-auto">
-   <%= image_tag "market-logo.png", class: "banner-img" %>
-    <h1 class="mb-0"><strong>My groceries</strong></h1>
-</div>
-    <h2 class="mt-3 d-flex justify-content-center cart-title" style="position: relative; left: -80px;">Shopping Cart</h2>
+<h2 class="mt-3 d-flex justify-content-center cart-title" style="position: relative; left: -100px; color: black;">Shopping Cart</h2>
 
 
 <div class="container mt-5">
-  <ul>
     <% @cart.ordered_lines.each do |line| %>
       <div class="card-product-cart mb-2">
         <img src=<%= "#{line.product.image_url}" %> class="img-product-cart m-3"/>
         <div class="card-product-cart-info">
-          <li>Item: <%= line.product.name %>/ Price: <%= humanized_money_with_symbol(line.product.price) %>  / Total Price: <%= humanized_money_with_symbol(line.total_price) %>
+          <p style="font-size: 20px; color:black;"><%= line.product.name %>/ Price: R<%= humanized_money_with_symbol(line.product.price) %>  / Total Price: R<%= humanized_money_with_symbol(line.total_price) %></p>
             <div class="link-cart-text">
               <div>
                 <%= link_to "+ #{line.quantity} ", line_item_add_path(:id => line), method: :post %>
                 <%= link_to "-", line_item_reduce_path(:id => line), method: :post %>
+                <%= link_to ('<i class="fas fa-trash-alt" style="padding-left: 19px;"></i>').html_safe, line_item_path(line), method: :delete %>
               </div>
-              <%= link_to "Remove item", line_item_path(line), method: :delete %>
             </div>
-          </li>
         </div>
         <img src=<%= line.product.market_image_url%> alt="market image" class="market-logo m-2">
       </div>
     <% end %>
-  </ul>
 </div>
 
 
 <div class="container mt-5 sub-total">
   <div class="title-sub">
-    <h3>Sub total: <%= humanized_money_with_symbol(@cart.sub_total) %></h3>
+    <h3>Sub total: R<%= humanized_money_with_symbol(@cart.sub_total) %></h3>
   </div>
   <div class="link-sub-text">
     <%= form_tag orders_path do %>

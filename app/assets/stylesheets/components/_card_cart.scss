@@ -8,7 +8,7 @@
   border-radius: 8px;
 }
 
-.card-product-cart img {
+.card-product-cart-img {
   height: 100%;
   width: 120px;
   object-fit: cover;
@@ -34,10 +34,12 @@
 
 .link-cart-text {
   display: inline;
+  font-size: 20px;
 }
 
 .card-product-cart-info {
   flex: 1 0 auto;
+  font-size: 19px;
 }
 
 .card-product-cart-info li{
@@ -98,4 +100,23 @@
 
 .card-trip-pricing {
   font-size: 20px;
+}
+
+.cart-title {
+  font-size: 40px;
+}
+
+.cart-icon {
+  position: relative;
+  top: 175px;
+  left: -93px;
+  font-size: 50px;
+}
+
+.cart-icon:hover{
+  color: #4C3575;
+}
+
+.cart-icon-show:hover{
+  color: #4C3575;
 }

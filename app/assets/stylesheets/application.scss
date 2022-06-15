@@ -8,22 +8,18 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "mapbox-gl/dist/mapbox-gl";
+// @import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 
 body {
-  background-color: #785ea8;
+  background-color: #efefef;
   position:relative;
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
-}
-
-
-.cart-title {
-  font-size: 35px;
 }
