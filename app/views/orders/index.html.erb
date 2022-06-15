@@ -2,8 +2,8 @@
   <h1 class="m-5" style="color:black;"><strong>You have <%= pluralize @orders.count, 'order' %> being delivered</strong></h1>
     <div class="orders-layout m-5">
       <% @orders.each_with_index do |order, i| %>
-      <div class="m-5 orders-card">
-        <h2 style ="margin-left:0; color: black;"><strong> Order #<%= order.id %> </strong></h2>
+      <div class="m-1 orders-card">
+        <h2 style ="margin-left:0; color: black;"><strong> Order 30.7<%= order.id %></strong></h2>
         <hr>
         <h3 style ="color:black;">Status: <%= order.state %></h3>
         <hr>
@@ -23,7 +23,7 @@
         <div class="modal-dialog">
           <div class="modal-content" style="border-radius:15px; color:#4C3575">
             <div class="modal-header">
-              <h3 class="modal-title" id="exampleModalLabel"><strong>Order # <%= order.id %></strong></h3>
+              <h3 class="modal-title" id="exampleModalLabel"><strong>Order 30.7<%= order.id %></strong></h3>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
