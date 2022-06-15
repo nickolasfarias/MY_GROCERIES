@@ -31,7 +31,7 @@
     <%= submit_tag 'Purchase', class: 'link-sub-text empty-cart mb-2 purchase' %>
     <% end %>
   </div>
-  <div class="link-sub-text empty-cart">
+  <div class="d-flex align-items-center justify-content-center mt-2">
     <%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"} %>
   </div>
 </div>

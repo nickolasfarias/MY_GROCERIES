@@ -3,15 +3,17 @@
     <div class="orders-layout m-5">
       <% @orders.each_with_index do |order, i| %>
       <div class="m-5 orders-card">
-        <h2 style ="margin-left:0; color:#7858A6;"><strong> Order #<%= order.id %> </strong></h2>
+        <h2 style ="margin-left:0; color: black;"><strong> Order #<%= order.id %> </strong></h2>
         <hr>
-        <h3>Status: <%= order.state %></h3>
+        <h3 style ="color:black;">Status: <%= order.state %></h3>
         <hr>
-        <h3>Total: R<%= humanized_money_with_symbol order.amount  %></h3>
+        <h3 style ="color:black;">Total: R<%= humanized_money_with_symbol order.amount  %></h3>
         <hr>
-        <button type="button" class="see-details" data-bs-toggle="modal" data-bs-target="#exampleModal<%= i %>">
-          See details
-        </button>
+        <div class="d-flex align-items-center justify-content-center">
+          <button type="button" class="see-details" data-bs-toggle="modal" data-bs-target="#exampleModal<%= i %>">
+            See details
+          </button>
+        </div>
       </div>
       <% end %>
     </div>
