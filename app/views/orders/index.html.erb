@@ -28,7 +28,7 @@
               <h4><strong>Items:</strong></h4>
               <ul>
                 <% order.cart.lines.each do |line|  %>
-                <li><strong><%= line.quantity %>X</strong> <%= line.product.name %> from <strong><%= line.product.market %></strong>. Cost: <strong> <%= humanized_money_with_symbol line.product.price * line.quantity  %> </strong></li>
+                <li><strong><%= line.quantity %>X</strong> <%= line.product.name %> from <strong><%= line.product.market %></strong>. Cost: <strong> R<%= humanized_money_with_symbol line.product.price * line.quantity  %> </strong></li>
                 <% end %>
               </ul>
               <hr>
