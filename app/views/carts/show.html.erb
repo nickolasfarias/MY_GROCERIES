@@ -7,7 +7,7 @@
       <div class="card-product-cart mb-2">
         <img src=<%= "#{line.product.image_url}" %> class="img-product-cart m-3"/>
         <div class="card-product-cart-info">
-          <li>Item: <%= line.product.name %>/ Price: <%= humanized_money_with_symbol(line.product.price) %>  / Total Price: <%= humanized_money_with_symbol(line.total_price) %>
+          <li><%= line.product.name %>/ Price: <%= humanized_money_with_symbol(line.product.price) %>  / Total Price: <%= humanized_money_with_symbol(line.total_price) %>
             <div class="link-cart-text">
               <div>
                 <%= link_to "+ #{line.quantity} ", line_item_add_path(:id => line), method: :post %>
