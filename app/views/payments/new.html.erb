@@ -15,7 +15,7 @@
             <div class="d-flex flex-column justify-content-center align-items-center" style="width 100%;">
               <button id="pay" class="pay mt-2 mb-3" ><strong>Pay</strong></button>
               <%= link_to "I don't want it",
-              orders_path(@order),
+              order_path(@order),
               method: :delete,
               data: { confirm: "Are you sure?" },
               class:"pay mt-2 mb-3 text-center" %>
