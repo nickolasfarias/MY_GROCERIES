@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-<<<<<<< HEAD
-=======
   resources :pages, only: [:home]
->>>>>>> 7dbda0716f0e409dac42610273d09d1b9ec3bf55
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.
   post 'lines/:id/add' => "lines#add_quantity", as: "line_item_add"
   post 'lines/:id/reduce' => "lines#reduce_quantity", as: "line_item_reduce"
