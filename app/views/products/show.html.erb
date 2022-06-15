@@ -12,9 +12,12 @@
         <div class="d-flex">
           <h2 class="text-center">💰 R$ <%= @product.price %></h2>
         </div>
-        <%= link_to lines_path(:product_id => @product.id), :method => :post do %>
-          <i class="fas fa-cart-plus cart-icon-show" style="font-size: 40px;margin-top: 17px;"></i>
-        <% end %>
+        <div class="d-flex align-items-center add-to-cart-button">
+          <%= link_to lines_path(:product_id => @product.id), :method => :post do %>
+            <p>Add to cart</p>
+            <i class="fas fa-cart-plus cart-icon-show" style="font-size: 40px;margin-top: 17px;"></i>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
