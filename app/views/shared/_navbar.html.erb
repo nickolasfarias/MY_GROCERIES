@@ -1,8 +1,17 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= controller_name %>-<%= action_name %>">
   <div class="container-fluid">
     <div class="logo-nav d-flex align-items-center">
-      <%= image_tag "market-logo.png", class: "banner-img" %>
-      <p class="h3 mb-0"><strong>MyGroceries</strong></p>
+      <% if current_user %>
+        <%= image_tag "market-logo.png", class: "banner-img" %>
+        <p class="h3 mb-0"><strong>MyGroceries</strong></p>
+      <% else %>
+        <%= link_to root_path do %>
+          <div class="d-flex align-items-center">
+            <%= image_tag "market-logo.png", class: "banner-img" %>
+            <p class="h3 mb-0" style="color:white;"><strong>MyGroceries</strong></p>
+          </div>
+        <% end %>
+      <% end %>
     </div>
 
 
@@ -20,7 +29,7 @@
             <%= link_to ('<i class="fas fa-shopping-basket nav-icon mx-3"></i>').html_safe, cart_path(Cart.last)  %>
           </li>
           <li class="nav-item dropdown">
-            <button class="nav-btn dropdown-toggle ms-3" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup ><strong> My profile</strong></button>
+            <button class="nav-btn dropdown-toggle ms-3 my-profile-btn" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup ><strong> My profile</strong></button>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My orders", orders_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>

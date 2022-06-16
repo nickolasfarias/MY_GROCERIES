@@ -15,7 +15,10 @@
 
   <body>
     <div class="page-container">
-      <%= render 'shared/navbar' %>
+      <% if current_user %>
+        <%= render 'shared/navbar' %>
+      <% else %>
+      <% end %>
       <%= render 'shared/flashes' %>
       <main id="main-content"><%= yield %></main>
       <%= render 'shared/footer' %>
