@@ -1,0 +1,50 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background-color: #4C3575;
+  height: 78px;
+  margin-bottom: 24px;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.nav-btn {
+  border-radius: 13px;
+  background-color: white;
+  color: #4C3575;
+  border: none;
+  padding: 7px;
+}
+
+.nav-btn:hover {
+  background-color: #4C3575;
+  color: white;
+}
+
+.nav-icon {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-icon:hover {
+  opacity: 0.7;
+}
+
+.logo-nav {
+  color: white;
+}
+
+.pages-home {
+  margin-bottom: 0px !important;
+}
+
+.my-profile-btn:hover {
+  background-color:#7c6a9b;
+  color:white;
+}

@@ -1,4 +1,4 @@
-
+<%= render 'shared/navbar' %>
 <div class="mestre">
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -37,7 +37,7 @@
 <div class="container" id="special">
   <div class="row" style="text-align: center;">
     <div class="form-actions3 col-12">
-      <%= f.button :submit, "Sign up", class: "mb-3" %>
+      <%= f.button :submit, "Sign up", class: "mb-3 login-btn" %>
       <%= link_to "Or Login", new_session_path(resource_name) %><br />
     </div>
   </div>

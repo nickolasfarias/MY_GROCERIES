@@ -1,0 +1,13 @@
+.page-container {
+  display: grid;
+  position: absolute;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  width: 100%;
+  }
+
+.avatar-perfil img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
