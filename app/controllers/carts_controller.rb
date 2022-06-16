@@ -7,6 +7,6 @@ class CartsController < ApplicationController
     @cart = Cart.last
     @cart.destroy
     session[:cart_id] = nil
-    redirect_to root_path
+    redirect_to products_path
   end
 end
