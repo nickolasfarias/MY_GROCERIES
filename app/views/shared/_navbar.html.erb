@@ -1,43 +1,48 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= controller_name %>-<%= action_name %>">
-  <div class="container-fluid">
-    <div class="logo-nav d-flex align-items-center">
-      <% if current_user %>
-        <%= image_tag "market-logo.png", class: "banner-img" %>
-        <p class="h3 mb-0"><strong>MyGroceries</strong></p>
-      <% else %>
-        <%= link_to root_path do %>
-          <div class="d-flex align-items-center">
+<div class="row">
+  <div class="col">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= controller_name %>-<%= action_name %>">
+      <div class="container-fluid">
+        <div class="logo-nav d-flex align-items-center">
+          <% if current_user %>
             <%= image_tag "market-logo.png", class: "banner-img" %>
-            <p class="h3 mb-0" style="color:white;"><strong>MyGroceries</strong></p>
-          </div>
-        <% end %>
-      <% end %>
+            <p class="h3 mb-0"><strong>MyGroceries</strong></p>
+          <% else %>
+            <%= link_to root_path do %>
+              <div class="d-flex align-items-center">
+                <%= image_tag "market-logo.png", class: "banner-img" %>
+                <p class="h3 mb-0" style="color:white;"><strong>MyGroceries</strong></p>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <% if user_signed_in? %>
+              <li class="nav-item active mt-1">
+                <%= link_to ('<i class="fas fa-home nav-icon mx-3"></i>').html_safe, products_path  %>
+              </li>
+              <li class="nav-item active mt-1">
+                <%= link_to ('<i class="fas fa-shopping-basket nav-icon mx-3"></i>').html_safe, cart_path(Cart.last)  %>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-btn dropdown-toggle ms-3 my-profile-btn" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup ><strong> My profile</strong></button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "My orders", orders_path, class: "dropdown-item" %>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                </div>
+              </li>
+            <% else %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
     </div>
 
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item active mt-1">
-            <%= link_to ('<i class="fas fa-home nav-icon mx-3"></i>').html_safe, products_path  %>
-          </li>
-          <li class="nav-item active mt-1">
-            <%= link_to ('<i class="fas fa-shopping-basket nav-icon mx-3"></i>').html_safe, cart_path(Cart.last)  %>
-          </li>
-          <li class="nav-item dropdown">
-            <button class="nav-btn dropdown-toggle ms-3 my-profile-btn" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup ><strong> My profile</strong></button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My orders", orders_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-        <% end %>
-      </ul>
-    </div>
   </div>
 </div>

@@ -12,6 +12,6 @@ class ProductsController < ApplicationController
     @count = Product.all
     @products = Product.all.order("random()")
     @products = Product.search_by_name(params[:query]) if params[:query].present?
-    @pagy, @products = pagy(@products, items: 20)
+    @pagy, @products = pagy(@products, items: 24)
   end
 end
