@@ -1,27 +1,43 @@
-<div class="banner d-flex align-items-end" style="background-image: url('<%= image_path "bannerall.png" %>'); margin-left:0; margin-top:0;">
-  <div class="container">
-    <div class="d-flex" style="margin-bottom: 120px;">
-      <%= link_to "Login", new_user_session_path, class: "banner-btn" %>
-      <%= link_to "Register", new_user_registration_path, class: "banner-btn"  %>
+<div class="row">
+  <div class="col">
+    <div class="banner d-flex align-items-end" style="background-image: url('<%= image_path "bannerall.png" %>'); margin-left:0; margin-top:0;">
+      <div class="container">
+        <div class="d-flex">
+          <%= link_to "Login", new_user_session_path, class: "banner-btn" %>
+          <%= link_to "Register", new_user_registration_path, class: "banner-btn"  %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
 <div class="container">
-  <h2 class="text-center mt-5" style="margin-left:0; color:#4C3575; font-size:55px;"><strong>How it works</strong></h2>
-  <div class="cards-home d-flex justify-content-center align-items-center">
-    <div class="card-home m-3">
-      <img src="<%= image_path "card1.png" %>" alt="">
-      <h3 class="mt-3 text-center" style="color:#4C3575;"><strong>Find your product</strong></h3>
-    </div>
-
-    <div class="card-home m-3">
-      <img src="<%= image_path "card2.png" %>" alt="">
-      <h3 class="mt-3 text-center" style="color:#4C3575;"><strong>Check the best price</strong></h3>
-    </div>
-
-    <div class="card-home m-3">
-      <img src="<%= image_path "card3.png" %>" alt="">
-      <h3 class="mt-3 text-center" style="color:#4C3575;"><strong>Save your money</strong></h3>
+  <div class="row">
+    <div class="col">
+        <h2 class="text-center mt-5" style="margin-left:0; color:#4C3575; font-size:55px;"><strong>How it works</strong></h2>
     </div>
   </div>
+    <div class="row">
+      <div class="col-sm-12 col-lg-4">
+        <div class="card-home m-3 text-center">
+          <img src="<%= image_path "card1.png" %>" alt="">
+          <h3 class="mt-3" style="color:#4C3575;"><strong>Find your product</strong></h3>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-lg-4">
+        <div class="card-home m-3 text-center">
+          <img src="<%= image_path "card2.png" %>" alt="">
+          <h3 class="mt-3" style="color:#4C3575;"><strong>Check the best price</strong></h3>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-lg-4">
+        <div class="card-home m-3 text-center">
+          <img src="<%= image_path "card3.png" %>" alt="">
+          <h3 class="mt-3" style="color:#4C3575;"><strong>Save your money</strong></h3>
+        </div>
+      </div>
+    </div>
 </div>
