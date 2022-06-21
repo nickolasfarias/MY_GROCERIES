@@ -23,21 +23,25 @@
 
 
 <div class="container-index mx-auto">
-  <div class="cards mt-5">
-    <% @products.each do |product| %>
-      <%= link_to product_path(product) do %>
-        <div class="card-trip x" style="border-radius: 6px">
-          <div class="card-trip-infos">
-            <%= image_tag product.image_url, class: "card-img" %>
-              <div class="index-name-height mt-1">
-                <p><%= product.name %></p>
+  <div class="mt-5">
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-sm-12 col-md-6 col-xl-3 col-xxl-2">
+          <%= link_to product_path(product) do %>
+            <div class="card-trip x" style="border-radius: 6px">
+              <div class="card-trip-infos">
+                <%= image_tag product.image_url, class: "card-img" %>
+                  <div class="index-name-height mt-1">
+                    <p><%= product.name %></p>
+                  </div>
+                <h2 class="index-price mx-auto">R<%= humanized_money_with_symbol(product.price) %></h2>
+                <img src=<%= product.market_image_url %> class="card-trip-user avatar-bordered mt-1" />
               </div>
-            <h2 class="index-price mx-auto">R<%= humanized_money_with_symbol(product.price) %></h2>
-            <img src=<%= product.market_image_url %> class="card-trip-user avatar-bordered mt-1" />
-          </div>
+            </div>
+          <% end %>
         </div>
       <% end %>
-    <% end %>
+    </div>
   </div>
   <div class="mt-5 d-flex justify-content-center align-items-center">
     <%== pagy_bootstrap_nav(@pagy) %>
