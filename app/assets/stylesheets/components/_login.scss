@@ -8,20 +8,22 @@ h2 {
   margin-left: 10%;
 }
 
-.form-inputs {
-  width: 30%;
-  color: black;
-  border-color: none;
-  margin-right: 40%;
-}
-
-.form-actions {
-  color: white;
-  background-color: white;
-  width: 9%;
-  margin-left: 10%;
-  border-radius: 25px;
-  border-color: none;
+.form-login {
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 3px;
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #4C3575 !important;
+  }
+  .btn {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    color: #4C3575 !important;
+  }
 }
 
 .remember {
